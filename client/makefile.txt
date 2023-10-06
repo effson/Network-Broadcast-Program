@@ -1,0 +1,10 @@
+CFLAGS+=-I../include/
+
+all:client
+
+client:client.o
+	gcc $^ -o $@ $(CFLAGS)
+
+
+clean:
+	re -rf *.o client
